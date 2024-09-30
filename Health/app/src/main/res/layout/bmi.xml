@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCCCC"
+    tools:context=".bmi">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".bmi">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFCCCC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="257dp"
+                android:layout_height="578dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="#FFFF99"
+                        android:text="姓名:"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/txtName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:backgroundTint="#FFFF99"
+                        android:ems="10"
+                        android:foregroundGravity="center"
+                        android:gravity="center"
+                        android:inputType="textPersonName"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="#FFFF99"
+                        android:text="性別:"
+                        android:textSize="20sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgGender"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdbBoy"
+                            android:layout_width="81dp"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:text="男"
+                            android:textSize="16sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <RadioButton
+                            android:id="@+id/rdbGirl"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="女"
+                            android:textSize="16sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTemp2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="#FFFF99"
+                        android:text="年齡:"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:backgroundTint="#FFFF99"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTemp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="#FFFF99"
+                        android:text="身高(Cm):"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:backgroundTint="#FFFF99"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTemp1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="#FFFF99"
+                        android:text="體重(Kg):"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:backgroundTint="#FFFF99"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:backgroundTint="#2D64B5"
+                        android:onClick="button_Click"
+                        android:shadowColor="#A86464"
+                        android:text="計算BMI"
+                        android:textColor="#FDFCFC"
+                        android:textColorHighlight="#C8AFAF"
+                        android:textSize="20sp"
+                        app:rippleColor="#74BDAD"
+                        app:strokeColor="#D3AEAE" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:backgroundTint="#2D64B5"
+                        android:onClick="button2_Click"
+                        android:text="清除"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/IbIOutput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="您的結果"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="273dp"
+                android:layout_height="66dp"
+                android:background="#FFFFCC"
+                android:gravity="center"
+                android:text="BMI檢測器"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.459"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.073" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="101dp"
+                android:layout_height="566dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="308dp"
+                android:src="@drawable/_38339969_194937796623213_4753598918446582375_n"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.557" />
+
+            <ImageView
+                android:id="@+id/button8"
+                android:layout_width="73dp"
+                android:layout_height="77dp"
+                android:layout_marginStart="8dp"
+                android:onClick="button8_Click"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.024"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.975"
+                app:srcCompat="@mipmap/img_1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

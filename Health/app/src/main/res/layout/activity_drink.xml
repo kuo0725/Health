@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".drink">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/p3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/button10"
+            android:layout_width="73dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:onClick="button9_Click"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.024"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975"
+            app:srcCompat="@mipmap/img_1" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="154dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="喝水紀錄系統"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="375dp"
+            android:layout_height="571dp"
+            android:layout_marginStart="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.659"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.443">
+
+            <LinearLayout
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Date"
+                    android:layout_width="143dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FCE38A"
+                    android:backgroundTint="#FCE38A"
+                    android:text="日期:"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="179dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="button3_Click"
+                    android:text="選擇日期" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="291dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Time"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FCE38A"
+                    android:text="時間:"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="button4_Click"
+                    android:text="選擇時間" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FCE38A"
+                    android:text="姓名:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="366dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="256dp">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="137dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FCE38A"
+                    android:text="本日目標水量:"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/MlNumber"
+                    android:layout_width="141dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/Ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="毫升(ml)"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FCE38A"
+                    android:text="目前已攝入水量(ml)"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="44dp"
+                    tools:layout_editor_absoluteY="306dp" />
+
+                <CheckBox
+                    android:id="@+id/check100ml"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="100" />
+
+                <CheckBox
+                    android:id="@+id/check200ml"
+                    android:layout_width="131dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="200" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check300ml"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="146dp"
+                    android:layout_weight="1"
+                    android:text="300" />
+
+                <CheckBox
+                    android:id="@+id/check400ml"
+                    android:layout_width="81dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="400" />
+
+                <CheckBox
+                    android:id="@+id/check500ml"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="500" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:onClick="button_Click"
+                    android:text="顯示水量總和" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:onClick="button2_Click"
+                    android:text="清除" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblOutput"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:gravity="center|left"
+                android:text="今日是:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblOutput2"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:gravity="center|left"
+                android:text="現在時間:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblOutput3"
+                android:layout_width="271dp"
+                android:layout_height="92dp"
+                android:gravity="center|left"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="117dp"
+            android:layout_height="121dp"
+            android:layout_marginTop="616dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.986"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.342"
+            app:srcCompat="@drawable/p5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
